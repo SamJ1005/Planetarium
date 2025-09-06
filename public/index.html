@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planetarium</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="Navigation.css" />
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2em;
+        }
+
+        section {
+            position: relative;
+            width: fit-content;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .solar-image {
+            border-radius: 10%;
+            overflow: hidden;
+            float: left;
+            margin: 0 20px 20px 0;
+            width: 350px;
+            height: auto;
+            max-width: 100%;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <canvas id="starCanvas" aria-hidden="true"></canvas>
+        <h1>🌏 Planetarium</h1>
+
+        <nav>
+            <ul class="left-list">
+                <li><a class="active" href="#">Home</a></li>
+            </ul>
+            <ul class="center-list">
+                <li><a href="Explore.html">Explore Planets</a></li>
+            </ul>
+            <ul class="right-list">
+                <li><a href="About.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1 style="font-size: 2.5rem; margin-bottom: 20px">The Solar System</h1>
+            <img src="Solar System.JPG" alt="Solar System" class="solar-image" />
+
+            <article>
+                <p>
+                    The Solar System is our cosmic neighborhood, a gravitationally bound
+                    system that includes the Sun, eight major planets, their moons, and
+                    countless smaller celestial bodies. It stretches far beyond what we
+                    can easily observe, occupying an enormous expanse of space filled
+                    with wonder and mystery.
+                </p>
+
+                <p>
+                    At the heart of the Solar System lies the <strong>Sun</strong>, a
+                    yellow dwarf star that contains more than 99% of the system's total
+                    mass. It provides the heat and light that sustain life on Earth and
+                    governs the movement of all objects in the Solar System through its
+                    gravitational pull.
+                </p>
+
+                <p>
+                    Orbiting the Sun are the <strong>eight planets</strong>, which are
+                    generally divided into two groups. The inner planets — Mercury,
+                    Venus, Earth, and Mars — are small, rocky, and dense. The outer
+                    planets — Jupiter, Saturn, Uranus, and Neptune — are massive,
+                    composed mostly of gases and ices, and surrounded by rings and
+                    numerous moons.
+                </p>
+
+                <p>
+                    Beyond the main planets lies the <strong>Kuiper Belt</strong>, home
+                    to icy bodies and dwarf planets like Pluto. Even farther out,
+                    scientists theorize the existence of the
+                    <strong>Oort Cloud</strong>, a vast spherical shell of icy objects
+                    that may be the source of long-period comets entering the inner
+                    Solar System.
+                </p>
+
+                <p>
+                    In addition to planets and moons, the Solar System contains
+                    countless
+                    <strong>asteroids, comets, and meteoroids</strong>. These smaller
+                    objects are remnants from the early formation of the system,
+                    offering valuable clues about its origins. The asteroid belt between
+                    Mars and Jupiter holds thousands of rocky bodies, while comets are
+                    icy travelers from the system's outer reaches.
+                </p>
+
+                <p>
+                    Scientists believe the Solar System formed around
+                    <strong>4.6 billion years ago</strong> from a giant rotating cloud
+                    of gas and dust known as a solar nebula. Under the influence of
+                    gravity, the nebula collapsed, forming the Sun at its center and a
+                    spinning disk of material that gradually coalesced into planets and
+                    other objects.
+                </p>
+
+                <p>
+                    Today, space missions and telescopes continue to explore the Solar
+                    System, expanding our knowledge and challenging our assumptions.
+                    From robotic rovers on Mars to probes exploring the outer planets,
+                    each discovery brings us closer to understanding the universe and
+                    our place within it.
+                </p>
+
+                <p>
+                    The Solar System is not just a collection of celestial bodies — it's
+                    a dynamic, evolving system that reminds us of the vastness of space,
+                    the power of nature, and the beauty of cosmic order.
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p style="text-align: left; font-size: 1.5em">
+            Follow us more on:
+            <a href="https://facebook.com" target="_blank" style="color: white; margin-left: 15px; text-decoration: none">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" style="color: white; margin-left: 15px; text-decoration: none">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://youtube.com" target="_blank" style="color: white; margin-left: 15px; text-decoration: none">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://x.com" target="_blank" style="color: white; margin-left: 15px; text-decoration: none">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" style="color: white; margin-left: 15px; text-decoration: none">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </p>
+        <p style="font-size: larger">&copy; 2025 Planetarium</p>
+    </footer>
+
+    <script type="module" src="stars.js"></script>
+</body>
+
+</html>

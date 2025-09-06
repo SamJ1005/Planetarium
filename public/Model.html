@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>3D Solar System</title>
+    <link rel="stylesheet" href="Navigation.css" />
+    <style>
+        body {
+            margin: 0;
+            background: black;
+            overflow: hidden;
+            font-family: sans-serif;
+        }
+
+        #ui {
+            position: absolute;
+            top: 60px;
+            /* move below nav bar */
+            left: 10px;
+            z-index: 1;
+            color: white;
+            font-size: 14px;
+        }
+
+        #label {
+            position: absolute;
+            padding: 4px 8px;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            font-size: 14px;
+            pointer-events: none;
+            display: none;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul class="left-list">
+            <li><a href="index.html">Home</a></li>
+        </ul>
+        <ul class="center-list">
+            <li><a class="active" href="Model.html">Explore Planets</a></li>
+        </ul>
+        <ul class="right-list">
+            <li><a href="About.html">About</a></li>
+        </ul>
+    </nav>
+    </header>
+    <div id="ui">
+        <div>
+            <label for="planetSelect">Focus Planet:</label>
+            <select id="planetSelect">
+                <option value="">--Select--</option>
+                <option value="Sun">Sun</option>
+                <option value="Mercury">Mercury</option>
+                <option value="Venus">Venus</option>
+                <option value="Earth">Earth</option>
+                <option value="Mars">Mars</option>
+                <option value="Jupiter">Jupiter</option>
+                <option value="Saturn">Saturn</option>
+                <option value="Uranus">Uranus</option>
+                <option value="Neptune">Neptune</option>
+            </select>
+        </div>
+        <div style="margin-top:5px;">
+            <!-- Reused buttons for time mode -->
+            <button id="playPauseBtn">Static View</button>
+            <button id="nowBtn">Present View</button>
+        </div>
+        <div style="margin-top:5px;">
+            Date/Time: <span id="timeDisplay"></span>
+        </div>
+    </div>
+    <div id="label"></div>
+    <script type="module" src="model.js"></script>
+</body>
+
+</html>

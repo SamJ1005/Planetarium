@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Planetarium</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="Navigation.css" />
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <style>
+        body {
+            font-family: microsoft sans serif;
+            font-size: 1rem;
+        }
+        .planet-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .planet-row:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .planet-model {
+            background: transparent;
+        }
+
+        .sun-model {
+            width: 350px;
+            height: 350px;
+        }
+
+        .mercury-model {
+            width: 120px;
+            height: 120px;
+        }
+
+        .venus-model {
+            width: 180px;
+            height: 180px;
+        }
+
+        .earth-model {
+            width: 230px;
+            height: 230px;
+        }
+
+        .moon-model {
+            width: 100px;
+            height: 100px;
+        }
+
+        .mars-model {
+            width: 160px;
+            height: 160px;
+        }
+
+        .jupiter-model {
+            width: 300px;
+            height: 300px;
+        }
+
+        .saturn-model {
+            width: 340px;
+            height: 340px;
+        }
+
+        .uranus-model {
+            width: 200px;
+            height: 200px;
+        }
+
+        .neptune-model {
+            width: 180px;
+            height: 180px;
+        }
+
+        .planet-text {
+            flex: 1;
+            text-align: left;
+        }
+
+        .planet-text h2 {
+            margin-bottom: 10px;
+        }
+
+        .planet-section {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            padding: 2em;
+        }
+
+        .planet-row {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .planet-row:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .planet-img {
+            width: 250px;
+            max-width: 40%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        }
+
+        .planet-text {
+            flex: 1;
+            text-align: left;
+        }
+
+        .planet-text h2 {
+            margin-bottom: 10px;
+        }
+
+        main,
+        section {
+            flex: 1;
+        }
+
+        .m-link {
+            text-align: center;
+            text-decoration: none;
+            font-family: script mt;
+            font-size: 2.5rem;
+        }
+
+        .m-link:hover {
+            text-decoration: underline;
+        }
+
+        li {
+            font-family: arial rounded mt !important;
+            font-size: large;
+        }
+
+        blockquote {
+            font-weight: bold;
+            font-size: larger;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>🌏 Planetarium</h1>
+
+        <nav>
+            <ul class="left-list">
+                <li><a href="index.html">Home</a></li>
+            </ul>
+            <ul class="center-list">
+                <li><a class="active" href="#">Explore Planets</a></li>
+            </ul>
+            <ul class="right-list">
+                <li><a href="About.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="planet-section">
+            <div class="planet-row">
+                <model-viewer src="Planets/Sun.glb" alt="Sun" class="planet-model sun-model" auto-rotate camera-controls disable-zoom></model-viewer>
+                <div class="planet-text">
+                    <h2>The Sun</h2>
+                    <p>
+                        The Sun is a massive yellow dwarf star at the heart of our Solar
+                        System, holding more than 99.8% of its total mass. Its energy is
+                        produced by nuclear fusion, converting hydrogen into helium and
+                        releasing immense amounts of heat and light. This energy drives
+                        weather, climates, and ecosystems on Earth. The Sun's strong
+                        gravity keeps planets, moons, comets, and asteroids in orbit. Its
+                        surface, called the photosphere, reaches about 5,500°C, while the
+                        core is millions of degrees hot. Solar flares and coronal mass
+                        ejections can affect Earth's space environment, sometimes
+                        disrupting satellites and communications.
+                    </p>
+                </div>
+            </div>
+
+            <div class="planet-row">
+                <model-viewer src="Planets/Mercury.glb" alt="Mercury" class="planet-model mercury-model" auto-rotate camera-controls disable-zoom></model-viewer>
+                <div class="planet-text">
+                    <h2>Mercury</h2>
+                    <p>
+                        Mercury is the smallest planet and the closest to the Sun,
+                        orbiting once every 88 days. With virtually no atmosphere, it
+                        cannot retain heat, resulting in extreme surface temperatures
+                        ranging from scorching hot during the day to freezing cold at
+                        night. The surface is covered with craters, resembling Earth’s
+                        Moon, because it lacks geological activity to renew itself.
+                        Despite its small size, Mercury has a dense iron-rich core, making
+                        it the second densest planet after Earth. It has no moons or
+                        rings. NASA’s MESSENGER mission revealed much about its
+                        composition, thin exosphere, and surprising traces of water ice
+                        near its poles.
+                    </p>
+                </div>
+            </div>
+
+            <div class="planet-row">
+                <model-viewer src="Planets/Venus.glb" alt="Venus" class="planet-model venus-model" auto-rotate camera-controls disable-zoom></model-viewer>
+                <div class="planet-text">
+                    <h2>Venus</h2>
+                    <p>
+                        Venus is often called Earth’s twin because of its similar size and
+                        composition, but its conditions are drastically different. The
+                        planet has a thick atmosphere of carbon dioxide and clouds of
+                        sulfuric acid, creating a runaway greenhouse effect that makes
+                        Venus the hottest planet in the Solar System. Surface temperatures
+                        can reach 465°C, hot enough to melt lead. The pressure on Venus is
+                        about 90 times stronger than Earth’s at sea level. Its surface
+                        features volcanoes, mountains, and vast lava plains. Despite these
+                        harsh conditions, Venus fascinates scientists as a key to
+                        understanding atmospheric dynamics, greenhouse effects, and
+                        planetary evolution.
+                    </p>
+                </div>
+            </div>
+
+            <div class="planet-row">
+                <model-viewer src="Planets/Earth.glb" alt="Earth" class="planet-model earth-model" auto-rotate camera-controls disable-zoom></model-viewer>
+                <div class="planet-text">
+                    <h2>Earth</h2>
+                    <p>
+                        Earth is the third planet from the Sun and the only known world to
+                        support life. About 71% of its surface is covered by water, which
+                        plays a crucial role in regulating climate and sustaining
+                        ecosystems. Its atmosphere, composed mainly of nitrogen and
+                        oxygen, provides breathable air and shields the planet from
+                        harmful solar radiation. Earth’s dynamic geology results in
+                        mountains, earthquakes, and volcanoes, while its magnetic field
+                        protects it from solar winds. The planet’s single natural
+                        satellite, the Moon, influences tides and stabilizes Earth’s tilt.
+                        Earth’s diversity of life and habitats makes it unique among all
+                        planets discovered so far. Earth is said to be only planet suitable for lives.
+                    </p>
+                </div>
+            </div>
+
+            <div class="planet-row">
+                <model-viewer src="Planets/Moon.glb" alt="Moon" class="planet-model moon-model" auto-rotate camera-controls disable-zoom></model-viewer>
+                <div class="planet-text">
+                    <h2>The Moon</h2>
+                    <p>
+                        The Moon, Earth’s only natural satellite, is about one-quarter the
+                        size of Earth. Its surface is marked by craters, volcanic plains,
+                        and mountain ranges, shaped by billions of years of impacts. The
+                        Moon plays a vital role in stabilizing Earth’s axial tilt, which
+                        helps regulate climate. It also causes tides through gravitational
+                        interaction with Earth’s oceans. The Moon has no atmosphere or
+                        liquid water, making its surface vulnerable to space weathering.
+                        Humans first visited the Moon in 1969 during NASA’s Apollo 11
+                        mission. Future missions plan to establish a sustainable presence,
+                        potentially using it as a gateway for deep-space exploration.
+                    </p>
+                </div>
+            </div>
+
+            <div class="planet-row">
+                <model-viewer src="Planets/Mars.glb" alt="Mars" class="planet-model mars-model" auto-rotate camera-controls disable-zoom></model-viewer>
+                <div class="planet-text">
+                    <h2>Mars</h2>
+                    <p>
+                        Mars, the Red Planet, is the fourth planet from the Sun and has
+                        long fascinated humans with the possibility of past or present
+                        life. Its reddish color comes from iron oxide (rust) on its
+                        surface. Mars has the tallest volcano, Olympus Mons, and the
+                        deepest canyon, Valles Marineris, in the Solar System. Its
+                        atmosphere is thin and mostly carbon dioxide, making it cold and
+                        unable to support liquid water on the surface for long. However,
+                        evidence suggests ancient rivers, lakes, and possibly oceans once
+                        existed. Mars has two small irregular moons, Phobos and Deimos,
+                        and is the target of numerous exploration missions.
+                    </p>
+                </div>
+            </div>
+
+            <div class="planet-row">
+                <model-viewer src="Planets/Jupiter.glb" alt="Jupiter" class="planet-model jupiter-model" auto-rotate camera-controls disable-zoom></model-viewer>
+                <div class="planet-text">
+                    <h2>Jupiter</h2>
+                    <p>
+                        Jupiter is the largest planet in the Solar System, a massive gas
+                        giant more than 11 times Earth’s diameter. It has a powerful
+                        magnetic field and dozens of moons—at least 95 confirmed—making it
+                        almost a solar system in itself. Its most iconic feature is the
+                        Great Red Spot, a giant storm that has raged for centuries.
+                        Jupiter’s composition is mostly hydrogen and helium, with no solid
+                        surface. Its largest moons, called the Galilean moons—Io, Europa,
+                        Ganymede, and Callisto—are fascinating worlds on their own, with
+                        volcanic activity, subsurface oceans, and icy crusts. Jupiter’s
+                        immense gravity influences comets and asteroids.
+                    </p>
+                </div>
+            </div>
+
+            <div class="planet-row">
+                <model-viewer src="Planets/Saturn.glb" alt="Saturn" class="planet-model saturn-model" auto-rotate camera-controls disable-zoom></model-viewer>
+                <div class="planet-text">
+                    <h2>Saturn</h2>
+                    <p>
+                        Saturn is a gas giant best known for its stunning ring system,
+                        composed of countless icy particles ranging from dust-sized grains
+                        to house-sized chunks. Though less dense than water, Saturn is
+                        massive and second only to Jupiter in size. Its atmosphere is
+                        mostly hydrogen and helium, with strong winds and storms. Saturn
+                        has over 140 confirmed moons, the largest being Titan, which has a
+                        thick atmosphere and methane lakes. Enceladus, another moon, has
+                        geysers that spew water vapor, hinting at subsurface oceans.
+                        Saturn’s rings and moons continue to intrigue scientists, offering
+                        clues about the formation of planetary systems and moons.
+                    </p>
+                </div>
+            </div>
+
+            <div class="planet-row">
+                <model-viewer src="Planets/Uranus.glb" alt="Uranus" class="planet-model uranus-model" auto-rotate camera-controls disable-zoom></model-viewer>
+                <div class="planet-text">
+                    <h2>Uranus</h2>
+                    <p>
+                        Uranus is an ice giant distinguished by its unique sideways
+                        rotation. Unlike other planets, it rotates on its side, likely due
+                        to a massive collision in the past. This extreme tilt causes
+                        unusual seasons, each lasting over 20 years. Uranus’s pale
+                        blue-green color comes from methane in its atmosphere, which
+                        absorbs red light. Its atmosphere is made up of hydrogen, helium,
+                        and icy methane, with winds reaching up to 900 km/h. Uranus has 27
+                        known moons and faint rings. Despite being a giant, Uranus is
+                        often called the “forgotten planet” because it has been visited
+                        only once by Voyager 2 in 1986.
+                    </p>
+                </div>
+            </div>
+
+            <div class="planet-row">
+                <model-viewer src="Planets/Neptune.glb" alt="Neptune" class="planet-model neptune-model" auto-rotate camera-controls disable-zoom></model-viewer>
+                <div class="planet-text">
+                    <h2>Neptune</h2>
+                    <p>
+                        Neptune is the farthest planet from the Sun, known for its deep
+                        blue color caused by methane in its atmosphere. It is similar to
+                        Uranus but more active, with the fastest winds in the Solar
+                        System, sometimes exceeding 2,000 km/h. Neptune’s atmosphere is
+                        dynamic, with large storms, including the Great Dark Spot observed
+                        by Voyager 2 in 1989. The planet has 14 known moons, the largest
+                        being Triton, which has geysers that spew nitrogen and orbits in
+                        the opposite direction of Neptune’s rotation, suggesting it was
+                        captured. Neptune remains a frontier for exploration, as no
+                        spacecraft has orbited it yet.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <div class="m-link">
+        <a href="Model.html">Click to view Solar 3D Model -></a>
+        </div>
+    </main>
+    <footer>
+        <p style="text-align: left; font-size: 1.5em">
+            Follow us more on:
+            <a href="https://facebook.com" target="_blank" style="color: white; margin-left: 15px; text-decoration: none">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" style="color: white; margin-left: 15px; text-decoration: none">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://youtube.com" target="_blank" style="color: white; margin-left: 15px; text-decoration: none">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://x.com" target="_blank" style="color: white; margin-left: 15px; text-decoration: none">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" style="color: white; margin-left: 15px; text-decoration: none">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </p>
+        <p style="font-size: larger">&copy; 2025 Planetarium</p>
+    </footer>
+    <script type="module" src="stars.js"></script>
+</body>
+
+</html>
