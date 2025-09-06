@@ -403,4 +403,17 @@ function animate() {
     controls.update(); // OrbitControls still active
     renderer.render(scene, camera);
 }
+function checkOrientation() {
+    const rotateMsg = document.getElementById("rotateMsg");
+    if (window.innerWidth < 768 && window.innerHeight > window.innerWidth) {
+        // Portrait mode on small devices
+        rotateMsg.style.display = "block";
+    } else {
+        rotateMsg.style.display = "none";
+    }
+}
+
+window.addEventListener("resize", checkOrientation);
+window.addEventListener("load", checkOrientation);
+
 animate();

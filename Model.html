@@ -13,16 +13,6 @@
             font-family: sans-serif;
         }
 
-        #ui {
-            position: absolute;
-            top: 60px;
-            /* move below nav bar */
-            left: 10px;
-            z-index: 1;
-            color: white;
-            font-size: 14px;
-        }
-
         #label {
             position: absolute;
             padding: 4px 8px;
@@ -32,6 +22,73 @@
             pointer-events: none;
             display: none;
             border-radius: 4px;
+        }
+
+        /* Container for UI */
+        #ui {
+            position: absolute;
+            top: 60px;
+            left: 10px;
+            z-index: 1;
+            color: white;
+            font-size: 1rem;
+            /* base font size */
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+            max-width: 90%;
+        }
+
+        /* Select and buttons */
+        #planetSelect,
+        #playPauseBtn,
+        #nowBtn {
+            padding: 0.5em 1em;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Button hover */
+        #playPauseBtn:hover,
+        #nowBtn:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Make selectors responsive */
+        @media (max-width: 768px) {
+            #ui {
+                top: auto;
+                bottom: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+                text-align: center;
+                font-size: 0.9rem;
+            }
+
+            #planetSelect,
+            #playPauseBtn,
+            #nowBtn {
+                width: 80vw;
+                font-size: 1rem;
+                margin: 0.3em 0;
+            }
+        }
+
+        /* Optional message for screen rotation */
+        #rotateMsg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 1.2rem;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 1em 2em;
+            border-radius: 8px;
+            display: none;
+            text-align: center;
         }
     </style>
 </head>
@@ -49,6 +106,7 @@
         </ul>
     </nav>
     </header>
+    <div id="rotateMsg">📱 For best view, rotate your device!</div>
     <div id="ui">
         <div>
             <label for="planetSelect">Focus Planet:</label>

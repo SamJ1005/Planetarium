@@ -16,28 +16,43 @@
         }
 
         section {
-            position: relative;
-            width: fit-content;
-            margin-bottom: 20px;
+            max-width: 90vw;
+            /* adjusts to screen width */
+            margin-bottom: 2em;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 1em;
+            border-radius: 10px;
+        }
+
+        article p {
+            font-size: clamp(14px, 2.5vw, 20px);
+            line-height: 1.6;
+            margin-bottom: 1em;
         }
 
         .solar-image {
             border-radius: 10%;
             overflow: hidden;
             float: left;
-            margin: 0 20px 20px 0;
-            width: 350px;
+            margin: 0 2vw 2vw 0;
+            width: 100%;
+            max-width: 350px;
             height: auto;
-            max-width: 100%;
         }
 
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 1em;
-            text-align: center;
-            clear: both;
+        @media screen and (max-width: 600px) {
+            .solar-image {
+                float: none;
+                display: block;
+                margin: 0 auto 1em auto;
+                width: 90%;
+                max-width: none;
+            }
+
+            article p {
+                font-size: clamp(16px, 3.5vw, 20px);
+                line-height: 1.6;
+            }
         }
     </style>
 </head>

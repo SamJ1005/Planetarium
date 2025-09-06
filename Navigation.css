@@ -1,100 +1,146 @@
+/* Global Page Defaults */
 body {
-    background-color: #b8b6f1;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  background-color: #b8b6f1;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
+/* ---------- HEADER ---------- */
 header {
-    background-color: black;
-    position: relative;
-    height: 200px; /* Adjust header height */
-    color: #fff;
-    text-align: center;
-    font-size: larger;
-    overflow: hidden; /* Ensures canvas fits inside */
+  background-color: black;
+  position: relative;
+  height: 30vh;
+  min-height: 150px;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
 }
 
-header h1, header nav {
-    margin-top: 25px;
-    position: relative;
-    z-index: 2; /* Keep text and nav above stars */
+header h1 {
+  font-size: clamp(24px, 4vw, 42px);
+  line-height: 1.2;
+  margin: 20px 0 10px 0;
+  position: relative;
+  z-index: 2;
 }
 
 #starCanvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-    z-index: 1; /* Background stars */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 1;
 }
 
-h1 {
-    margin-top: -8px;
-    text-align: center;
-}
-
+/* ---------- NAVIGATION ---------- */
 nav {
-    display: flex;
-    /* Makes the nav a flex container */
-    justify-content: space-between;
-    /* Pushes the first item to the left, the last to the right, and spaces the one in the middle */
-    align-items: center;
-    /* Aligns items vertically in the center */
-    padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  padding: 10px 20px;
 }
 
-/* Style for the lists and list items */
 nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  gap: 15px;
 }
 
 nav li {
-    margin: 0 15px;
+  margin: 0;
 }
 
-/* Style for the center list to align its contents */
-.center-list {
-    margin-left: auto;
-    /* Pushes the list to the right */
-    margin-right: auto;
-    /* Pushes the list to the left, effectively centering it */
-}
-
-/* Common styling for links */
 nav a {
-    color: white;
-    text-decoration: none;
-    font-family: cambria math;
-    font-size: 30px;
-    padding: 8px 12px;
-    display: block;
+  font-size: clamp(16px, 2vw, 22px);
+  text-decoration: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
 }
 
-/* Hover effect */
 nav a:hover {
-    background-color: rgba(59, 101, 251, 0.4);
-    border-radius: 5px;
+  background-color: rgba(59, 101, 251, 0.4);
 }
 
 nav a.active {
-    border-radius: 10%;
-    font-weight: bolder;
-    background-color: rgba(59, 101, 251, 0.3);
-    color: #ffffff;
+  font-weight: bold;
+  background-color: rgba(59, 101, 251, 0.3);
+  color: #fff;
 }
 
-ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.center-list {
+  margin: 0 auto;
 }
 
-li {
-    margin-bottom: 10px;
+/* ---------- FOOTER ---------- */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+}
+
+footer p {
+  font-size: clamp(12px, 2vw, 18px);
+  margin: 0.5em 0;
+}
+
+footer a {
+  font-size: clamp(14px, 2.5vw, 20px);
+  margin-left: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    height: 35vh;
+  }
+
+  header h1 {
+    font-size: 28px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a {
+    font-size: 18px;
+    padding: 8px 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header h1 {
+    font-size: 22px;
+  }
+
+  nav a {
+    font-size: 16px;
+    padding: 6px 8px;
+  }
+
+  footer p,
+  footer a {
+    font-size: 14px;
+  }
 }
