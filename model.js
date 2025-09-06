@@ -5,6 +5,13 @@ import {
 import {
     GLTFLoader
 } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/loaders/GLTFLoader.js";
+const loader = new GLTFLoader();
+
+// --- DRACO Loader setup ---
+import { DRACOLoader } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/loaders/DRACOLoader.js";
+const dracoLoader = new DRACOLoader();
+dracoLoader.setDecoderPath("https://www.gstatic.com/draco/v1/decoders/");
+loader.setDRACOLoader(dracoLoader);
 
 // --- Scene, Camera, Renderer ---
 const scene = new THREE.Scene();
@@ -103,7 +110,6 @@ const planetsData = [{
     },
 ];
 
-const loader = new GLTFLoader();
 const celestialBodies = [];
 
 // --- Stars ---
@@ -406,7 +412,6 @@ function animate() {
 function checkOrientation() {
     const rotateMsg = document.getElementById("rotateMsg");
     if (window.innerWidth < 768 && window.innerHeight > window.innerWidth) {
-        // Portrait mode on small devices
         rotateMsg.style.display = "block";
     } else {
         rotateMsg.style.display = "none";
