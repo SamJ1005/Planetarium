@@ -161,7 +161,7 @@ planetsData.forEach(data => {
     const pivot = new THREE.Object3D();
     scene.add(pivot);
 
-    loader.load(`/Planets/${data.file}`, gltf => {
+    loader.load(`public/Planets/${data.file}`, gltf => {
         const model = gltf.scene;
         const box = new THREE.Box3().setFromObject(model);
         const size = new THREE.Vector3();
@@ -199,7 +199,7 @@ planetsData.forEach(data => {
             });
             moonPivot.add(new THREE.LineLoop(moonOrbitGeo, moonOrbitMat));
 
-            loader.load("/Planets/moon.glb", gltfMoon => {
+            loader.load("public/Planets/moon.glb", gltfMoon => {
                 const moon = gltfMoon.scene;
                 const moonBox = new THREE.Box3().setFromObject(moon);
                 const moonSize = new THREE.Vector3();
